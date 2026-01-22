@@ -305,7 +305,7 @@ export default function Home() {
 
   useEffect(() => {
     if (isCarouselPaused) return
-    const interval = setInterval(nextImage, 2000)
+    const interval = setInterval(nextImage, 4000)
     return () => clearInterval(interval)
   }, [isCarouselPaused, nextImage])
 
