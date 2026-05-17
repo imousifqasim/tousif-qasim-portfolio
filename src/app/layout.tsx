@@ -4,7 +4,6 @@ import "./globals.css";
 import { VisualEditsMessenger } from "orchids-visual-edits";
 import { ThemeProvider } from "@/components/theme-provider";
 import Script from "next/script";
-import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,24 +15,24 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
+  metadataBase: new URL("https://tousifqasim.dev/"),
+  alternates: {
+    canonical: "/",
+  },
   title: "Tousif Qasim | WordPress, Shopify & WHMCS Developer",
   description: "I’m Tousif Qasim, Professional WordPress, Shopify & WHMCS developer with 7+ years' experience, delivering custom websites, eCommerce stores, and automated solutions.",
-   icons: {
-    icon: "/favicon.ico", // path to your favicon
+  icons: {
+    icon: "/favicon.ico",
   },
   authors: [
-    { name: 'Tousif Qasim', url: 'https://tousifqasim.dev/' }
+    { name: "Tousif Qasim", url: "https://tousifqasim.dev/" }
   ],
-
   openGraph: {
     title: "Tousif Qasim | WordPress, Shopify & WHMCS Developer",
     description: "I’m Tousif Qasim, Professional WordPress, Shopify & WHMCS developer with 7+ years' experience, delivering custom websites, eCommerce stores, and automated solutions.",
     url: "https://tousifqasim.dev/",
     siteName: "Tousif Qasim",
-       icons: {
-    icon: "/favicon.ico", // path to your favicon
-  },
     images: [
       {
         url: "https://i.postimg.cc/9Qj2mDzg/Tousif-Qasim.png",
@@ -45,7 +44,6 @@ export const metadata = {
     locale: "en_US",
     type: "website"
   },
-
   twitter: {
     card: "summary_large_image",
     title: "Tousif Qasim | WordPress, Shopify & WHMCS Developer",
@@ -53,7 +51,7 @@ export const metadata = {
     images: ["https://i.postimg.cc/9Qj2mDzg/Tousif-Qasim.png"],
     creator: "@tousifqasim"
   }
-} as const;
+};
 
 
 export default function RootLayout({
@@ -63,6 +61,24 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Tousif Qasim",
+              jobTitle: "WordPress, Shopify & WHMCS Developer",
+              url: "https://tousifqasim.dev/",
+              image: "https://i.postimg.cc/9Qj2mDzg/Tousif-Qasim.png",
+              sameAs: [
+                "https://twitter.com/tousifqasim"
+              ]
+            })
+          }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
@@ -80,7 +96,6 @@ export default function RootLayout({
         >
           {children}
         </ThemeProvider>
-        <SpeedInsights />
         <VisualEditsMessenger />
       </body>
     </html>

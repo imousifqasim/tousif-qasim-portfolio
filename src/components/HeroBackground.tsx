@@ -30,7 +30,7 @@ export function HeroBackground() {
       {[...Array(15)].map((_, i) => (
         <motion.div
           key={i}
-          className="absolute rounded-full bg-blue-500/10 blur-xl"
+          className="absolute rounded-full bg-emerald-500/10 blur-xl"
           style={{
             width: Math.random() * 300 + 100,
             height: Math.random() * 300 + 100,
@@ -52,7 +52,7 @@ export function HeroBackground() {
 
       {/* Mouse Follower Glows */}
       <motion.div
-        className="absolute w-[800px] h-[800px] bg-blue-600/10 rounded-full blur-[150px]"
+        className="absolute w-[800px] h-[800px] bg-emerald-600/10 rounded-full blur-[150px]"
         style={{
           x: x,
           y: y,
@@ -61,7 +61,7 @@ export function HeroBackground() {
         }}
       />
       <motion.div
-        className="absolute w-[400px] h-[400px] bg-cyan-400/10 rounded-full blur-[100px]"
+        className="absolute w-[400px] h-[400px] bg-teal-400/10 rounded-full blur-[100px]"
         style={{
           x: x,
           y: y,
@@ -74,7 +74,7 @@ export function HeroBackground() {
       {[...Array(6)].map((_, i) => (
         <motion.div
           key={`dot-${i}`}
-          className="absolute w-2 h-2 bg-blue-400/40 rounded-full blur-sm"
+          className="absolute w-2 h-2 bg-emerald-400/40 rounded-full blur-sm"
           style={{
             x: x,
             y: y,
