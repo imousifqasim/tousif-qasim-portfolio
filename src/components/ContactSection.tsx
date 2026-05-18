@@ -198,7 +198,7 @@ export function ContactSection() {
                       value={formData.budget}
                       onValueChange={(val) => setFormData({ ...formData, budget: val })}
                     >
-                      <SelectTrigger className="w-full h-14 text-base rounded-xl bg-white/5 dark:bg-black/10 border-white/10 focus:border-emerald-600/50 focus-visible:ring-emerald-600/20 focus-visible:ring-offset-0 focus:ring-2 focus:ring-emerald-600/20 transition-all">
+                      <SelectTrigger className="w-full h-14 text-base rounded-xl bg-white/5 dark:bg-black/10 border-white/10 focus:border-emerald-600/50 transition-all">
                         <SelectValue placeholder="Select Budget Range" />
                       </SelectTrigger>
                       <SelectContent className="border-white/10 bg-background/95 backdrop-blur-xl">
@@ -234,7 +234,7 @@ export function ContactSection() {
                       value={formData.interest}
                       onValueChange={(val) => setFormData({ ...formData, interest: val })}
                     >
-                      <SelectTrigger className="w-full h-14 text-base rounded-xl bg-white/5 dark:bg-black/10 border-white/10 focus:border-emerald-600/50 focus-visible:ring-emerald-600/20 focus-visible:ring-offset-0 focus:ring-2 focus:ring-emerald-600/20 transition-all">
+                      <SelectTrigger className="w-full h-14 text-base rounded-xl bg-white/5 dark:bg-black/10 border-white/10 focus:border-emerald-600/50 transition-all">
                         <SelectValue placeholder="What are you looking for?" />
                       </SelectTrigger>
                       <SelectContent className="border-white/10 bg-background/95 backdrop-blur-xl">
