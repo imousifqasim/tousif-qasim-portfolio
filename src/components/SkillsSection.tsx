@@ -21,7 +21,6 @@ const skills: Skill[] = [
   { name: "WHMCS", level: 90, icon: Server, category: "CMS & Platforms", years: "5+" },
   { name: "Shopify", level: 85, icon: ShoppingCart, category: "CMS & Platforms", years: "3+" },
 
-  { name: "HTML / CSS", level: 95, icon: Globe, category: "Frontend", years: "7+" },
   { name: "JavaScript / React", level: 82, icon: Zap, category: "Frontend", years: "4+" },
   { name: "Tailwind CSS", level: 85, icon: Palette, category: "Frontend", years: "3+" },
 
